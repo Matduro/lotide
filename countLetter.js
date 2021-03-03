@@ -19,8 +19,13 @@ const countLetters = (string) => {
       count[letter] = 1;
     }
   }
-  console.log(count);
+  //console.log(count);
   return count;
 };
 
-countLetters("lighthouse in the house");
+const result1 = countLetters("lighthouse in the house!!!");
+
+assertEqual(result1["l"], 1);
+assertEqual(result1["!"], undefined);
+assertEqual(result1["h"], 4);
+assertEqual(result1[" "], undefined);
