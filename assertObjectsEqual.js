@@ -25,6 +25,20 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+const eqArrays = (array1, array2) => {
+  const lenOne = array1.length;
+  const lenTwo = array2.length;
+  if (lenOne !== lenTwo) {
+    return false;
+  }
+  for (let i = 0; i < lenOne; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 const assertObjectsEqual = function(actual, expected) {
   // import inspect function below
   const inspect = require('util').inspect;
