@@ -12,7 +12,13 @@ const eqObjects = function(object1, object2) {
   //access and compare the 2 objects for their values.
   for (const key of objKeys1) {
     // console.log(object1[key] + " previous is obj1 and here is obj2 " + object2[key]);
-    if (object1[key] !== object2[key]) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      // console.log(object1[key], object2[key])
+      const isArray = eqArrays(object1[key], object2[key]);
+      if (!isArray) {
+        return false;
+      }
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
   }
@@ -28,7 +34,7 @@ const assertObjectsEqual = function(actual, expected) {
   if (isEqual) {
     console.log(`🟢🟢🟢 Assertion Passed: ${inspect(actual)} === ${inspect(expected)} 🟢🟢🟢`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} === ${inspect(expected)} 🛑🛑🛑`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)} 🛑🛑🛑`);
   }
 };
 
