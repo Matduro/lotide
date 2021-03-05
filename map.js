@@ -58,7 +58,7 @@ const results1 = map(words, word => word[0]);
 const results2 = map(words2, word => word[0]);
 const results3 = map(words3, word => word[0]);
 const results4 = map(words4, word => word[0]);
-// console.log(results1);
+//console.log(results1);
 assertArraysEqual(results1, results2);
 assertArraysEqual(results2, results3);
 assertArraysEqual(results2, results4);
