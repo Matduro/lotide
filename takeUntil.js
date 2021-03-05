@@ -34,6 +34,8 @@ const assertArraysEqual = (arrayOne, arrayTwo) => {
 const takeUntil = function(array, callback) {
   let valuesUntil = [];
   for (let value of array) {
+    // if the value of the array returns a false value from the callback we continue to add to the valuesUntil
+    // array, else it passes, in other words meets the value of the callback, then we break.
     if (!callback(value)) {
       //valuesUntil = valuesUntil.concat(value);
       valuesUntil.push(value);
