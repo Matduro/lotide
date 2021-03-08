@@ -1,3 +1,5 @@
+const eqArrays = require('./eqArrays');
+
 /* // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   // const stopEmoji = U+1F6D1;
@@ -14,7 +16,7 @@ const assertEqual = function(actual, expected) {
 */
 
 
-const eqArrays = (array1, array2) => {
+/* const eqArrays = (array1, array2) => {
   const lenOne = array1.length;
   const lenTwo = array2.length;
   if (lenOne !== lenTwo) {
@@ -26,7 +28,7 @@ const eqArrays = (array1, array2) => {
     }
   }
   return true;
-};
+}; */
 
 const assertArraysEqual = (arrayOne, arrayTwo) => {
   let isEqual = eqArrays(arrayOne, arrayTwo);
@@ -37,7 +39,7 @@ const assertArraysEqual = (arrayOne, arrayTwo) => {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
+// assertArraysEqual([1, 2, 3], [1, 2, 3]);
 
 /*
 // TEST CODE
@@ -45,3 +47,5 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual("Lighthouse Labs", "Lighthouse Labs");
 assertEqual(1, 3); */
+
+module.exports = assertArraysEqual;
