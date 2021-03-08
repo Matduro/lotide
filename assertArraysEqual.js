@@ -33,9 +33,9 @@ const assertEqual = function(actual, expected) {
 const assertArraysEqual = (arrayOne, arrayTwo) => {
   let isEqual = eqArrays(arrayOne, arrayTwo);
   if (isEqual) {
-    console.log("✅✅✅" + "Assertion Passed: " + arrayOne + " === " + arrayTwo);
+    console.log("🟢🟢🟢 " + "Assertion Passed: " + arrayOne + " === " + arrayTwo + " 🟢🟢🟢");
   } else {
-    console.log("🆘🆘🆘 " + "Assertion Failed: " + arrayOne + " === " + arrayTwo);
+    console.log("🛑🛑🛑 " + "Assertion Failed: " + arrayOne + " === " + arrayTwo + " 🛑🛑🛑");
   }
 };
 
