@@ -1,5 +1,5 @@
 // try to rewrite the input parameter with (...) to account for all arrays.
-const eqArrays = (array1, array2) => {
+/* const eqArrays = (array1, array2) => {
   const lenOne = array1.length;
   const lenTwo = array2.length;
   if (lenOne !== lenTwo) {
@@ -12,16 +12,16 @@ const eqArrays = (array1, array2) => {
   }
   return true;
 };
+ */
 
-
-const assertArraysEqual = (arrayOne, arrayTwo) => {
+/* const assertArraysEqual = (arrayOne, arrayTwo) => {
   let isEqual = eqArrays(arrayOne, arrayTwo);
   if (isEqual) {
     console.log("✅✅✅" + "Assertion Passed: " + arrayOne + " === " + arrayTwo);
   } else {
     console.log("🆘🆘🆘 " + "Assertion Failed: " + arrayOne + " === " + arrayTwo);
   }
-};
+}; */
 
 const middle = (someArray) => {
   let midArray = [];
@@ -35,17 +35,19 @@ const middle = (someArray) => {
   } else {
     midArray = someArray.slice(halfLen, halfLen + 1);
   }
-  console.log(midArray);
+  // console.log(midArray);
   return midArray;
 };
 
-// middle([1]); // => []
-// middle([1, 2]); // => []
-//For arrays with odd number of elements, an array containing a single middle element should be returned.
-middle([1, 2, 3]); // => [2]
-middle([1, 2, 3, 4, 5]); // => [3]
-//For arrays with an even number of elements, an array containing the two elements in the middle should be returned
-middle([1, 2, 3, 4]); // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
+// // middle([1]); // => []
+// // middle([1, 2]); // => []
+// //For arrays with odd number of elements, an array containing a single middle element should be returned.
+// middle([1, 2, 3]); // => [2]
+// middle([1, 2, 3, 4, 5]); // => [3]
+// //For arrays with an even number of elements, an array containing the two elements in the middle should be returned
+// middle([1, 2, 3, 4]); // => [2, 3]
+// middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+
+module.exports = middle;
