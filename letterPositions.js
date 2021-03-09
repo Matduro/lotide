@@ -1,3 +1,4 @@
+
 const letterPositions = function(sentence) {
   const results = {};
   // remove all the space and punctuation characters, then lower case all the letters and split the letters in an array
@@ -9,7 +10,7 @@ const letterPositions = function(sentence) {
     if (!results[arrLetters[i]]) {
       results[arrLetters[i]] = [];
       results[arrLetters[i]].push(i);
-      console.log(results);
+      // console.log(results);
     } else {
       results[arrLetters[i]].push(i);
     }
@@ -18,7 +19,27 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const eqArrays = (array1, array2) => {
+// returns an object with letters as keys and
+// values of arrays for the positions of the letter keys in the input string
+/*
+"hello my friend" results in
+{
+  h: [ 0 ],
+  e: [ 1, 10 ],
+  l: [ 2, 3 ],
+  o: [ 4 ],
+  m: [ 5 ],
+  y: [ 6 ],
+  f: [ 7 ],
+  r: [ 8 ],
+  i: [ 9 ],
+  n: [ 11 ]
+}
+ */
+
+module.exports = letterPositions;
+
+/* const eqArrays = (array1, array2) => {
   const lenOne = array1.length;
   const lenTwo = array2.length;
   if (lenOne !== lenTwo) {
@@ -30,9 +51,9 @@ const eqArrays = (array1, array2) => {
     }
   }
   return true;
-};
+}; */
 
-const assertArraysEqual = (arrayOne, arrayTwo) => {
+/* const assertArraysEqual = (arrayOne, arrayTwo) => {
   let isEqual = eqArrays(arrayOne, arrayTwo);
   if (isEqual) {
     console.log("🟢🟢🟢" + "Assertion Passed: " + arrayOne + " === " + arrayTwo);
@@ -43,4 +64,4 @@ const assertArraysEqual = (arrayOne, arrayTwo) => {
 
 // .e to pull the e value pair.
 assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello my friend").e, [1, 10]);
+assertArraysEqual(letterPositions("hello my friend").e, [1, 10]); */

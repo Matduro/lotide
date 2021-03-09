@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@matduro/lotide",
+  "version": "1.0.1",
+  "description": "basic npm library implementation",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Matduro/lotide.git"
   },
-  "author": "",
+  "author": "matduro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Matduro/lotide/issues"
